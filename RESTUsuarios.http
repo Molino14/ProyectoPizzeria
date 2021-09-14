@@ -1,5 +1,7 @@
 ### Solicitar usuarios
 GET http://localhost:5000/api/usuarios/
+### Solicitar usuarios
+GET https://pizzeria-cife.herokuapp.com/api/usuarios/
 
 ### Solicitar usuarios por ID
 GET http://localhost:5000/api/usuarios/612d1fa4eff4fb054bd12be3
