@@ -7,7 +7,15 @@ const rutasUsuarios = require('./rutas/rutas-usuarios');
 const rutasPedidos = require('./rutas/rutas-pedidos');
 const rutasPizzas = require('./rutas/rutas-pizzas');
 
+app.use(cors());
 app.use(express.json());
+
+app.use((req, res, next) => {
+    res.setHeader('Access-Controlo-Allow-Origin', '*');
+    res.setHeader('Access-Controlo-Allow-Methods', 'GET, POST, DELETE, PATCH');
+    res.setHeader('Access-Controlo-Allow-Headers', 'Content-Type, Origin, X-Request-With, Authorization, Accept');
+    next();
+}
 
 app.use('/api/usuarios', rutasUsuarios);
 app.use('/api/pedidos', rutasPedidos);
